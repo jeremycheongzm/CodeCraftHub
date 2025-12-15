@@ -10,6 +10,11 @@ After completing this lab, you will be able to perform the following tasks:
 - Create test cases with Generative AI
 - Deploy the deployable application designed and developed entirely with Generative AI
 
+## MongoDB Server
+- Start MongoDB server
+- Retrieve MONGO_HOST, and MONGO_PASSWORD
+- Insert into `.env` file
+
 ## Start Node.js server
 - Install packages
     - `npm install`
@@ -22,11 +27,13 @@ After completing this lab, you will be able to perform the following tasks:
     - `curl -X POST -H "Content-Type: application/json" -d '{"username": "john_smith_1", "email": "johnsmith_1@example.com", "password": "password1234!"}' http://localhost:5000/api/users/register'`
 - User Login: Send a POST request to http://localhost:5000/api/users/login with the following request body:
     - `{"email": "johnsmith_1@example.com", "password": "Password1234!"}`
+    - Retrieve the JSON Web Token (JWT)
 - In the terminal, run this  to verify the endpoint:
     - `curl -X POST -H "Content-Type: application/json" -d '{"email": "johnsmith_1@example.com", "password": "Password1234!"}' http://localhost:5000/api/users/login`
 
 ## Building and Running the Docker Containers
- 1.  Build the Docker Images: `docker-compose build`
- 2.  Run the Containers: `docker-compose up`
- 3.  Access the Application at `http://localhost:5000`, MongoDB will be running in the background.
- 4.  Stop the Containers: `docker-compose down`
+ 1.  Replace JWT_SECRET with JWT in `docker-compose.yml`
+ 2.  Build the Docker Images: `docker-compose build`
+ 3.  Run the Containers: `docker-compose up`
+ 4.  Access the Application at `http://localhost:5000`, MongoDB will be running in the background.
+ 5.  Stop the Containers: `docker-compose down`
