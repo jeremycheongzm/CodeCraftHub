@@ -15,7 +15,7 @@ After completing this lab, you will be able to perform the following tasks:
 - Retrieve MONGO_HOST, and MONGO_PASSWORD
 - Insert into `.env` file
 
-## Start Node.js server
+## Node.js Server
 - Install packages
     - `npm install`
 - Run `node src/app.js`
