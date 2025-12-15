@@ -10,12 +10,23 @@ After completing this lab, you will be able to perform the following tasks:
 - Create test cases with Generative AI
 - Deploy the deployable application designed and developed entirely with Generative AI
 
+## Start Node.js server
+- Install packages
+    - `npm install`
+- Run `node src/app.js`
 
-## Testing API Endpoints
+## Testing API Endpoints with Postman
 - User Registration: Send a POST request to http://localhost:5000/api/users/register with the following request body:
-    - `{"username": "john_smith_1",
-    "email": "johnsmith_1@example.com", "password": "Password1234!"}`
-- `curl -X POST -H "Content-Type: application/json" -d '{"username": "john_smith_1", "email": "johnsmith_1@example.com", "password": "password1234!"}' http://localhost:5000/api/users/register'`
+    - `{"username": "john_smith_1", "email": "johnsmith_1@example.com", "password": "Password1234!"}`
+- In the terminal, run this to verify the endpoint:
+    - `curl -X POST -H "Content-Type: application/json" -d '{"username": "john_smith_1", "email": "johnsmith_1@example.com", "password": "password1234!"}' http://localhost:5000/api/users/register'`
 - User Login: Send a POST request to http://localhost:5000/api/users/login with the following request body:
     - `{"email": "johnsmith_1@example.com", "password": "Password1234!"}`
-- `curl -X POST -H "Content-Type: application/json" -d '{"email": "johnsmith_1@example.com", "password": "Password1234!"}' http://localhost:5000/api/users/login`
+- In the terminal, run this  to verify the endpoint:
+    - `curl -X POST -H "Content-Type: application/json" -d '{"email": "johnsmith_1@example.com", "password": "Password1234!"}' http://localhost:5000/api/users/login`
+
+## Building and Running the Docker Containers
+ 1.  Build the Docker Images: `docker-compose build`
+ 2.  Run the Containers: `docker-compose up`
+ 3.  Access the Application at `http://localhost:5000`, MongoDB will be running in the background.
+ 4.  Stop the Containers: `docker-compose down`
